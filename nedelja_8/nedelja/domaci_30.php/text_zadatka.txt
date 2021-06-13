@@ -1,0 +1,10 @@
+Svakom proizvodu dodati članicu grupa - string koji prikazuje kojoj grupi proizvoda pripada (u niz $podaci dodati 'grupa').
+Prepraviti metodu prikazi_sve_proizvode($grupa = "") da prikazuje samo proizvode odredjene grupe ako je taj parameter dobijen. 
+
+Napraviti klasu WebSite. Metode: 
+ - header() sa naslovom "Dobro dosli u web-shop" - link ka index.php,
+ - footer() sa naslovom "Bolje vas nasli" ,
+ - meni() koji prikazuje listu svih grupa (svaki naziv grupe je link "index.php?grupa=…").
+
+Prepraviti index.php i detaljnije.php da prikazuju header, pa meni, pa proizvode, pa footer...
+Prepraviti index.php da ucitava naziv grupe preko GET i da prikazuje grupu iz linka.
