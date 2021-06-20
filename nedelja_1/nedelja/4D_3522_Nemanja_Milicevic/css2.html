@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS domaći, 2. zadatak</title>
+
+        <style>
+            body {
+                font-size: 18px;
+            }
+
+            fieldset {
+                background-color: azure;
+                width: 300px;
+            }
+
+            legend {
+                background-color: rgb(179, 179, 179);
+            }
+
+            .labels_1 {
+                color: hsla(199, 67%, 39%, 0.829)
+            }
+
+            .labels_2 {
+                color: #12A355
+            }
+
+            label, legend {
+                font-weight: bold;
+            }
+
+
+        </style>
+
+        <link rel="stylesheet" href="style_for_inputs.css">
+    </head>
+
+    <body>
+        <form method="GET" action="server.php" target="result">
+            <fieldset>
+                <legend>Upitnik za prijavljene sportiste:</legend>
+
+                <p>
+                    <label for="name" class="labels_1">Ime, Ime roditelja, Prezime:</label>
+                    <input 
+                        id="name" 
+                        name="username"
+                        class="inputs"
+                        type="text" 
+                        placeholder="Ovde unesite Vaše ime" 
+                    />
+                </p>
+
+                <p>
+                    <label for="age" class="labels_1">Broj godina:</label>
+                    <input 
+                        id="age" 
+                        name="user_age"
+                        class="inputs"
+                        type="number"
+                        value="18"
+                        min="18"
+                        step="1"
+                    />
+                </p>
+
+                <p>
+                    <label class="labels_1">Pol:</label>
+                    <select name="user_sex" class="inputs">
+                        <option value="male">Muški</option>
+                        <option value="female">Ženski</option>
+                        <option value="none1">Ne želim da se izjasnim</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label class="labels_2">Označite tip sporta koji trenirate:<br></label>
+                    <input type="radio" name="sport" value="team" />timski (fudbal, košarka...)<br>
+                    <input type="radio" name="sport" value="swim" />plivalački (plivanje, veslanje...)<br>
+                    <input type="radio" name="sport" value="run" />trkački (trčanje, brzo hodanje...)<br>
+                    <input type="radio" name="sport" value="fight" />neka od borilačkih veština<br>
+                    <input type="radio" name="sport" value="none2" />ništa od navedenog
+                </p>
+
+                <p>
+                    <label class="labels_2">Označite način finansiranja:<br></label>
+                    <input type="checkbox" name="finance" value="SSS" />Stipendija Sportskog Saveza Srbije<br>
+                    <input type="checkbox" name="finance" value="sponsor" />Sponzorstvo kompanija<br>
+                    <input type="checkbox" name="finance" value="self" />Lični izvori prihoda<br>
+                    <input type="checkbox" name="finance" value="other" />Drugi izvori
+                </p>
+
+                <p>
+                    <textarea placeholder="Navedite članove Vašeg tima kao i glavno i odgovorno lice Vašeg kluba"
+                    cols="45" rows="10" name="statement"></textarea>
+                </p>
+
+                <p>
+                    <input type="submit" value="Pošalji" id="button" />
+                </p>
+            </fieldset>
+        </form>
+    </body>
+</html>

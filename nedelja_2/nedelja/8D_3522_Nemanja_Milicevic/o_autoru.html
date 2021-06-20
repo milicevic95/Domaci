@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html lang="en" style="scroll-behavior: smooth;">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>O autoru</title>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+            
+            body, body * {
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 0;
+                margin: 0;
+            }
+
+            body {
+                background-color: honeydew;
+            }
+
+            #div_za_meni {
+                background-color: rgb(202, 220, 243);
+                padding: 15px 0;
+                border-bottom: gray double 4px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+            }
+
+            ul {
+                list-style-type: none;
+                margin-left: 18px;
+            }
+
+            .meni_stavke {
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+                display: inline-block;
+                width: 24%;
+                border: 3px gray solid;
+                border-radius: 10px;
+                padding: 10px 0;
+                position: relative;
+            }
+            
+            .meni_stavke:hover {
+                background-color: honeydew;
+                cursor: pointer;
+            }
+
+            .podmeni {
+                font-size: 16px;
+                font-weight: 600;
+                text-align: left;
+                display: none;
+                border: 1px gray solid;
+                border-radius: 20%;
+                background-color: rgb(255, 253, 223);
+                padding: 20px 20px;
+                position: absolute;
+                top: 110%;
+                left: 25%;
+                cursor: default;
+            }
+
+            .podmeni li {
+                margin: 25px 10px;
+                cursor: pointer;
+            }
+
+            .meni_stavke:hover .podmeni {
+                display: block;
+            }
+
+            #div_za_meni a {
+                text-decoration: none;
+                color: black;
+            }
+
+            div.divs {
+                margin: 10%;
+                height: 450px;
+                box-shadow: 8px 10px gray;
+                position: relative;
+            }
+
+            #div_za_wel {
+                background: white url("slike/atoms.png") no-repeat center / contain
+            }
+
+            .naslov {
+                font-family: 'Courgette', cursive;
+                font-size: 24px;
+                line-height: 40px;
+                position: absolute;
+                top: 5%;
+                left: 5%;
+            }
+
+            #div_za_wel p {
+                position: absolute;
+                top: 86%;
+                left: 26%;
+                text-shadow: 6px 6px 6px rgb(76, 168, 76);
+            }
+
+            #obrazovanje, #poslovi, #kursevi, #hobi {
+                background-color: rgb(255, 253, 223);
+            }
+
+            #obrazovanje span, #kursevi span {
+                font-weight: bold;
+            }
+
+            #obrazovanje img, #hobi img, #slobodno_vreme img {
+                width: 30%;
+                border-width: 10px 10px 60px;
+                border-style: solid;
+                border-color: white;
+                outline: gray solid 1px;
+                transition: all 2s;
+            }
+
+            #obrazovanje img {
+                position: absolute;
+                top: 1%;
+                left: 65%;
+            }
+
+            #obrazovanje img:hover {
+                width: 50%;
+                position: absolute;
+                top: 1%;
+                left: 45%;
+                cursor: zoom-in;
+            }
+
+            #edu_lista {
+                line-height: 25px;
+                position: absolute;
+                top: 18%;
+                left: 10%;
+            }
+
+            #poslovi p:last-child {
+                text-align: justify;
+                line-height: 30px;
+                position: absolute;
+                top: 18%;
+                left: 10%;
+                right: 10%;
+            }
+
+            #kurs_lista {
+                line-height: 25px;
+                position: absolute;
+                top: 25%;
+                left: 15%;
+            }
+
+            span#span_period {
+                font-weight: normal;
+                font-style: oblique;
+            }
+
+            #hobi img {
+                position: absolute;
+                top: 20%;
+                left: 10%;
+            }
+
+            #hobi img:hover {
+                width: 50%;
+                position: absolute;
+                top: 20%;
+                left: 10%;
+                cursor: zoom-in;
+            }
+
+            #hobi_tekst {
+                text-align: justify;
+                line-height: 30px;
+                position: absolute;
+                top: 25%;
+                left: 50%;
+                right: 10%;
+            }
+
+            #slobodno_vreme {
+                background-color: white;
+            }
+
+            #slobodno_vreme img {
+                position: absolute;
+                top: 8%;
+                left: 65%;
+            }
+
+            #slobodno_vreme img:hover {
+                width: 50%;
+                position: absolute;
+                top: 8%;
+                left: 45%;
+                cursor: zoom-in;
+            }
+
+            #free_time_tekst {
+                text-align: justify;
+                line-height: 30px;
+                position: absolute;
+                top: 35%;
+                left: 15%;
+                right: 50%;
+            }
+
+            p.start_p {
+                margin: 0;
+                padding: 0;
+                background-color: honeydew;
+                height: 2px;
+            }
+
+            footer {
+                color: white;
+                background-color: rgb(34, 39, 43);
+                padding: 30px;
+                border-top: gray double 4px;
+                position: relative;
+            }
+
+            footer img {
+                position: absolute;
+                top: 20%;
+                right: 2%;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="div_za_meni">
+            <ul>
+                <li class="meni_stavke">
+                    <span><a href="pocetna.html">Početna strana</a></span>
+                    <ul class="podmeni">
+                        <li>
+                            <a href="pocetna.html#mark_1">Opšti podaci</a>
+                        </li>
+                        <li>
+                            <a href="pocetna.html#mark_2">Zašto IT?</a>
+                        </li>
+                        <li>
+                            <a href="pocetna.html#mark_3">IT Bootcamp i ja</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meni_stavke">
+                    <span><a href="o_autoru.html">O autoru</a></span>
+                    <ul class="podmeni">
+                        <li>
+                            <a href="o_autoru.html#mark_1">Obrazovanje</a>
+                        </li>
+                        <li>
+                            <a href="o_autoru.html#mark_2">Poslovi</a>
+                        </li>
+                        <li>
+                            <a href="o_autoru.html#mark_3">Kursevi</a>
+                        </li>
+                        <li>
+                            <a href="o_autoru.html#mark_4">Hobi</a>
+                        </li>
+                        <li>
+                            <a href="o_autoru.html#mark_5">Slobodno vreme</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meni_stavke">
+                    <span><a href="projekti.html">Projekti</a></span>
+                    <ul class="podmeni">
+                        <li>
+                            <a href="projekti.html#mark_1">PHP</a>
+                        </li>
+                        <li>
+                            <a href="projekti.html#mark_2">Python</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meni_stavke">
+                    <span><a href="kontakt.html">Kontakt</a></span>
+                    <ul class="podmeni">
+                        <li>
+                            <a href="kontakt.html#mark_1">Kontakt podaci</a>
+                        </li>
+                        <li>
+                            <a href="kontakt.html#mark_2">Kako do mene?</a>
+                        </li>
+                        <li>
+                            <a href="kontakt.html#mark_3">Kontakt forma</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="div_za_wel" class="divs">
+            <p class="naslov">
+                Skroluj dole ako te zanima nešto više o meni :)
+            </p>
+        </div>
+
+        <p id="mark_1" class="start_p"></p>
+
+        <div id="obrazovanje" class="divs">
+            <p class="naslov">
+                Obrazovanje
+            </p>
+
+            <ul id="edu_lista">
+                <li>
+                    <span>Univerzitet u Beogradu, Fakultet za fizičku hemiju</span>
+                    <ul>
+                        <li>&emsp;- doktorske studije (2019 - nadalje)</li>
+                    </ul>
+                </li>
+                <li>
+                    <br><span>Univerzitet u Beogradu, Fakultet za fizičku hemiju</span>
+                    <ul>
+                        <li>&emsp;- master studije (2018 - 2019)</li>
+                        <li>&emsp;- prosečna ocena: 9,75</li>
+                    </ul>
+                </li>
+                <li>
+                    <br><span>Univerzitet u Beogradu, Fakultet za fizičku hemiju</span>
+                    <ul>
+                        <li>&emsp;- osnovne studije (2014 - 2018)</li>
+                        <li>&emsp;- prosečna ocena: 8,32</li>
+                    </ul>
+                </li>
+                <li>
+                    <br><span>Medicinska škola "Beograd"</span>
+                    <ul>
+                        <li>&emsp;- srednja škola (2010 - 2014)</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <img src="slike/fax.jpg" alt="Odbrana master rada" />
+        </div>
+
+        <p id="mark_2" class="start_p"></p>
+
+        <div id="poslovi" class="divs">
+            <p class="naslov">
+                Poslovi
+            </p>
+
+            <p>
+                &emsp;&emsp;&emsp;Kao i sa izborom škola, lutao sam i kad je u pitanju izbor profesije.
+                <br>
+                <br>
+                &emsp;&emsp;&emsp;Tokom master studija, volontirao sam u laboratoriji za kalibraciju uređaja "Metrolab". Potom sam, pre pandemije Covida-19, šest meseci radio u kompaniji za asistenciju u medicinskom osiguranju "Europ Assistance" na poziciji Keys Validator. Od septembra 2020. godine, radim u Institutu za nuklearne nauke "Vinča" na poziciji istraživač-pripravnik. Kao doktorand fizičke hemije, bavim se istraživanjima u oblasti tankih slojeva i njihovog modelovanja.
+                <br>
+                <br>
+                &emsp;&emsp;&emsp;Međutim, čvrsto sam rešio da svoju profesiju usmerim ka IT delatnosti i nadam se da ću uskoro naći posao na kome ću dobiti mogućnost da se kvalitetno usavršavam.
+            </p>
+        </div>
+
+        <p id="mark_3" class="start_p"></p>
+
+        <div id="kursevi" class="divs">
+            <p class="naslov">
+                Kursevi
+            </p>
+
+            <ul id="kurs_lista">
+                <li><span>PHP:</span>
+                    <ul>
+                        <li>
+                            &emsp;- IT Bootcamp <span id="span_period">(april 2021 - nadalje)</span>
+                        </li>
+                    </ul>
+                </li>
+                <li><br><span>Python:</span>
+                    <ul>
+                        <li>
+                            &emsp;- Kurs "<a href="https://www.udemy.com/course/complete-python-bootcamp/?fbclid=IwAR3cazAelhHkJge6JSBVBseRGERCUVe_BvEcibtk6fv9we7Xvv2vdi57hOY" target="_blank">Python Bootcamp From Zero to Hero in Python</a>" na udemy.com
+                        </li>
+                        <li>
+                            &emsp;- Kurs "<a href="https://www.coursera.org/learn/problem-solving-programming-video-games/home/info" target="_blank">Problem Solving, Python Programming, and Video Games</a>" na coursera.org
+                        </li>
+                    </ul>
+                </li>
+                <li><br><span>Jezici:</span>
+                    <ul>
+                        <li>
+                            &emsp;- Engleski jezik, nivo B2, škola stranih jezika "Akademija Oxford"
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <p id="mark_4" class="start_p"></p>
+        
+        <div id="hobi" class="divs">
+            <p class="naslov">
+                Hobi
+            </p>
+
+            <p id="hobi_tekst">
+                &emsp;&emsp;&emsp;Moj glavni hobi je bavljenje fitnesom. Rutina mi je da 4 dana u nedelji odvojim za jedan i po sat kvalitetnog treninga. Posvećujem veliku pažnju fizičkoj aktivnosti i zdravoj ishrani.
+                <br>
+                <br>
+                &emsp;&emsp;&emsp;Na slici levo možete videti mene u svom drugom prirodnom staništu - teretani. Prvo stanište je naravno za kompom. :)
+            </p>
+
+            <img src="slike/gym.jpg" alt="Autor u teretani">
+        </div>
+
+        <p id="mark_5" class="start_p"></p>
+        
+        <div id="slobodno_vreme" class="divs">
+            <p class="naslov">
+                Slobodno vreme
+            </p>
+
+            <p id="free_time_tekst">
+                &emsp;&emsp;&emsp;Slobodno vreme je rezervisano za druženje! Praksa je (ili je bar bila pre početka pandemije) da subotom uveče izlazim sa društvom i to vreme iskoristim za provod.
+            </p>
+
+            <img src="slike/party.jpg" alt="Party time!">
+        </div>
+
+        <footer>
+            <p>
+                Ova web stranica je izrađena kao projekat u okviru kursa "Razvoj web stranica (PHP)" IT Bootcamp škole.
+            </p>
+
+            <img src="slike/itbcblack.JPG" alt="IT Bootcamp" /
+        </footer>
+    </body>
+</html>

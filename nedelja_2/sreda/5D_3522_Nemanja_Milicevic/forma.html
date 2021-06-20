@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forma</title>
+
+        <style>
+            form * {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            form {
+                width: 320px;
+                height: 270px;
+                padding: 0;
+                border: 1px lightblue solid;
+                background: url('sky.jpeg') center / cover
+            }
+
+            label, input[type="submit"] {
+                display: inline-block;
+                width: 320px;
+                padding-top: 11px;
+                padding-bottom: 15px;
+                background-color:rgb(72, 209, 179);
+                color: white;
+                text-align: center;
+            }
+
+            label {
+                font-size: 18px;
+            }
+
+            input[type="submit"] {
+                font-size: 14px;
+                border: none;
+            }
+
+            input[type="text"] {
+                height: 30px;
+            }
+
+            textarea {
+                height: 50px;
+                padding-top: 12px;
+            }
+
+            input[type="text"], textarea {
+                width: 306px;
+                font-size: 14px;
+                padding-left: 10px;
+                border: 1px solid gainsboro;
+                border-radius: 4px;
+            }
+
+            label, input[type="text"], textarea {
+                margin-bottom: 11px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form action="server.php" method="GET">
+            <label>Contact Us</label>
+            <input type="text" name="username" placeholder="Your Name" />
+            <input type="text" name="email" placeholder="E-mail Address" />
+            <textarea name="message" placeholder="Type your Message"></textarea>
+            <input type="submit" name="send" value="Send" />
+        </form>
+    </body>
+</html>

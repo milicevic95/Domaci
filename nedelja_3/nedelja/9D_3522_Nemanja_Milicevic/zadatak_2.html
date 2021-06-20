@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>2. zadatak</title>
+
+        <style>
+            div {
+                background-color: darkslategray;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+                color: white;
+                display: grid;
+                grid-template-columns: 200px 1fr 200px;
+            }
+
+            p {
+                margin: 0;
+                padding: 20px;
+            }
+
+            div p:last-child {
+                justify-self: end;
+            }
+
+            div p:first-child {
+                justify-self: start;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <p>
+                Site name
+            </p>
+            <p></p>
+            <p>
+                Navigation
+            </p>
+        </div>
+    </body>
+</html>

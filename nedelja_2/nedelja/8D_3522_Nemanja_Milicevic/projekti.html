@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html lang="en" style="scroll-behavior: smooth;">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projekti</title>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+            
+            body, body * {
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 0;
+                margin: 0;
+            }
+
+            body {
+                background-color: honeydew;
+            }
+
+            #div_za_meni {
+                background-color: rgb(202, 220, 243);
+                padding: 15px 0;
+                border-bottom: gray double 4px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+            }
+
+            ul {
+                list-style-type: none;
+                margin-left: 18px;
+            }
+
+            .meni_stavke {
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+                display: inline-block;
+                width: 24%;
+                border: 3px gray solid;
+                border-radius: 10px;
+                padding: 10px 0;
+                position: relative;
+            }
+            
+            .meni_stavke:hover {
+                background-color: honeydew;
+                cursor: pointer;
+            }
+
+            .podmeni {
+                font-size: 16px;
+                font-weight: 600;
+                text-align: left;
+                display: none;
+                border: 1px gray solid;
+                border-radius: 20%;
+                background-color: rgb(255, 253, 223);
+                padding: 20px 20px;
+                position: absolute;
+                top: 110%;
+                left: 25%;
+                cursor: default;
+            }
+
+            .podmeni li {
+                margin: 25px 10px;
+                cursor: pointer;
+            }
+
+            .meni_stavke:hover .podmeni {
+                display: block;
+            }
+
+            #div_za_meni a {
+                text-decoration: none;
+                color: black;
+            }
+
+            div.divs, table {
+                margin: 10%;
+                height: 450px;
+                box-shadow: 8px 10px gray;
+                position: relative;
+            }
+
+            table caption {
+                font-family: 'Courgette', cursive;
+                font-size: 24px;
+                line-height: 40px;
+            }
+
+            table {
+                width: 1080px;
+            }
+
+            table th, table td {
+                border: 1px solid gray;
+            }
+
+            .numbers {
+                padding: 0 50px;
+            }
+
+            table tr td {
+                padding-left: 100px;
+            }
+
+            table tr:nth-child(odd) {
+                background-color: rgb(252, 223, 180);
+            }
+
+            table tr:nth-child(even) {
+                background-color: white;
+            }
+
+            table tr:first-child th:first-child, table tr:nth-child(4) th:first-child {
+                background-color: rgb(202, 220, 243);
+            }
+
+            table tr:nth-child(odd) td {
+                background-color: white;
+            }
+
+            table tr:nth-child(even) td {
+                background-color: rgb(252, 223, 180);
+            }
+
+            .naslov {
+                font-family: 'Courgette', cursive;
+                font-size: 24px;
+                line-height: 40px;
+                position: absolute;
+                top: 5%;
+                left: 5%;
+            }
+
+            #php_proj {
+                background-color: white;
+            }
+
+            #py_proj {
+                background-color: rgb(255, 253, 223);
+            }
+
+            #php_proj ul, #py_proj ul {
+                line-height: 50px;
+                position: absolute;
+                top: 18%;
+                left: 10%;
+                right: 10%;
+            }
+
+            #php_proj ul span, #py_proj ul span {
+                font-weight: bold;
+            }
+
+            #php_proj ul span span {
+                font-style: oblique;
+                font-size: 14px;
+            }
+
+            p.start_p {
+                margin: 0;
+                padding: 0;
+                background-color: honeydew;
+                height: 2px;
+            }
+
+            footer {
+                color: white;
+                background-color: rgb(34, 39, 43);
+                padding: 30px;
+                border-top: gray double 4px;
+                position: relative;
+            }
+
+            footer img {
+                position: absolute;
+                top: 20%;
+                right: 2%;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="div_za_meni">
+            <ul>
+                <li class="meni_stavke">
+                    <span><a href="pocetna.html">Početna strana</a></span>
+                    <ul class="podmeni">
+                        <li>
+                            <a href="pocetna.html#mark_1">Opšti podaci</a>
+                        </li>
+                        <li>
+                            <a href="pocetna.html#mark_2">Zašto IT?</a>
+                        </li>
+                        <li>
+                            <a href="pocetna.html#mark_3">IT Bootcamp i ja</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meni_stavke">
+                    <span><a href="o_autoru.html">O autoru</a></span>
+                    <ul class="podmeni">
+                        <li>
+                            <a href="o_autoru.html#mark_1">Obrazovanje</a>
+                        </li>
+                        <li>
+                            <a href="o_autoru.html#mark_2">Poslovi</a>
+                        </li>
+                        <li>
+                            <a href="o_autoru.html#mark_3">Kursevi</a>
+                        </li>
+                        <li>
+                            <a href="o_autoru.html#mark_4">Hobi</a>
+                        </li>
+                        <li>
+                            <a href="o_autoru.html#mark_5">Slobodno vreme</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meni_stavke">
+                    <span><a href="projekti.html">Projekti</a></span>
+                    <ul class="podmeni">
+                        <li>
+                            <a href="projekti.html#mark_1">PHP</a>
+                        </li>
+                        <li>
+                            <a href="projekti.html#mark_2">Python</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meni_stavke">
+                    <span><a href="kontakt.html">Kontakt</a></span>
+                    <ul class="podmeni">
+                        <li>
+                            <a href="kontakt.html#mark_1">Kontakt podaci</a>
+                        </li>
+                        <li>
+                            <a href="kontakt.html#mark_2">Kako do mene?</a>
+                        </li>
+                        <li>
+                            <a href="kontakt.html#mark_3">Kontakt forma</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <table>
+            <caption>Tabela projekata</caption>
+            <tr>
+                <th rowspan="3">PHP</th>
+                <th class="numbers">1.</th>
+                <td>Web stranica za kompaniju "Mobilna Telefonija Srbije"</td>
+            </tr>
+            <tr>
+                <th class="numbers">2.</th>
+                <td>Web stranica za OŠ "Sveti Sava"</td>
+            </tr>
+            <tr>
+                <th class="numbers">3.</th>
+                <td>Lični sajt za striming filmova</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Python</th>
+                <th class="numbers">1.</th>
+                <td>Tic-tac-toe</td>
+            </tr>
+            <tr>
+                <th class="numbers">2.</th>
+                <td>Blackjack</td>
+            </tr>
+        </table>
+
+        <p id="mark_1" class="start_p"></p>
+
+        <div id="php_proj" class="divs">
+            <p class="naslov">
+                PHP projekti
+            </p>
+
+            <ul><span>Back-end svih projekata navedenih ispod je odrađen u PHP-u, dok je front-end odrađen kombinacijom CSS-a i JavaScript-a. <span>Napomena: Web stranice navedene na ovoj stranici kao moji PHP projekti zapravo nisu moji projekti i služe samo kao primer.</span></span>
+                <li>
+                    &emsp;&emsp;&emsp;#1 Web stranica za kompaniju "Mobilna Telefonija Srbije" ( <a href="https://mts.rs/" target="_blank">mts.rs</a> )
+                </li>
+                <li>
+                    &emsp;&emsp;&emsp;#2 Web stranica za OŠ "Sveti Sava" ( <a href="http://ossvetisavabg.edu.rs/" target="_blank">ossvetisavabg.edu.rs</a> )
+                </li>
+                <li>
+                    &emsp;&emsp;&emsp;#3 Lični sajt za striming filmova ( <a href="https://www.filmovi.me/" target="_blank">filmovi.me</a> )
+                </li>
+            </ul>
+        </div>
+
+        <p id="mark_2" class="start_p"></p>
+
+        <div id="py_proj" class="divs">
+            <p class="naslov">
+                Python projekti
+            </p>
+
+            <ul><span>Python projekti su rađeni u Python-u 3. Korišćen je princip objektno orijentisanog programiranja građenja klasa i definisanja metoda unutar njih. Klikom na projekat, možete videti odgovarajući kod.
+            </span>
+                <li>
+                    &emsp;&emsp;&emsp;#1 <a href="https://drive.google.com/file/d/1k72mQAVf5RBWN17RPEchiMpPZ8DkDn6h/view?usp=sharing" target="_blank">Tic-tac-toe</a>
+                </li>
+                <li>
+                    &emsp;&emsp;&emsp;#2 <a href="https://drive.google.com/file/d/1pF9egkrJH-9gjFikACjbjCMlsJntuXIy/view?usp=sharing" target="_blank">Blackjack</a>
+                </li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>
+                Ova web stranica je izrađena kao projekat u okviru kursa "Razvoj web stranica (PHP)" IT Bootcamp škole.
+            </p>
+
+            <img src="slike/itbcblack.JPG" alt="IT Bootcamp" /
+        </footer>
+    </body>
+</html>

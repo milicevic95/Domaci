@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Div sa slikom</title>
+
+        <style>
+            div {
+                width: 200px;
+                border: 2px solid black;
+            }
+
+            div#with_bg {
+                width: 196px; height: 196px;
+                background: url("movie.jpg") no-repeat center / contain;
+                border: 2px dotted red;
+                border-radius: 50%;
+            }
+
+            p#movie_title {
+                font-size: 22px;
+                font-weight: 700;
+                text-align: center;
+            }
+
+            span {
+                font-weight: 700;
+            }
+
+            p#movie_title span {
+                color: red;
+                text-transform: uppercase;
+            }
+
+            h3 {
+                color: blue;
+            }
+
+            p#about_movie {
+                height: 150px;
+                line-height: 19px;
+                overflow-y: scroll;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <p id="movie_title">Movie: <span>"Avengers: Infinity War"</span></p>
+            <div id="with_bg"></div>
+            <h3>Description:</h3>
+            <p id="about_movie"><span>Avengers: Infinity War</span> is a 2018 American superhero film based on the Marvel Comics superhero team the Avengers. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the sequel to The Avengers (2012) and Avengers: Age of Ultron (2015), and the 19th film in the Marvel Cinematic Universe (MCU). Directed by Anthony and Joe Russo and written by Christopher Markus and Stephen McFeely, the film features an ensemble cast including Robert Downey Jr., Chris Hemsworth, Mark Ruffalo, Chris Evans, Scarlett Johansson, Benedict Cumberbatch, Don Cheadle, Tom Holland, Chadwick Boseman, Paul Bettany, Elizabeth Olsen, Anthony Mackie, Sebastian Stan, Danai Gurira, Letitia Wright, Dave Bautista, Zoe Saldana, Josh Brolin, and Chris Pratt. In the film, the Avengers and the Guardians of the Galaxy attempt to prevent Thanos from collecting the six all-powerful Infinity Stones as part of his quest to kill half of all life in the universe.</p>
+        </div>
+    </body>
+</html>

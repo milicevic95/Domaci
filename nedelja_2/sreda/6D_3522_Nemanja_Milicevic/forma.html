@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forma</title>
+
+        <style>
+            form * {
+                display: block;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                margin: 15px 10px;
+            }
+
+            form {
+                width: 320px;
+                margin-left: 20px;
+            }
+
+            label {
+                margin-bottom: 0;
+                color: gray;
+                opacity: 0.8;
+            }
+
+            #title {
+                color: black;
+                font-size: 24px;
+                font-weight: 500;
+                opacity: 1;
+            }
+
+            input[type="text"] {
+                border: none;
+                border-bottom: 2px rgba(128, 128, 128, 0.226) solid;
+                font-size: 16px;
+                padding-top: 7px;
+                padding-bottom: 7px;
+                padding-left: 5px;
+                margin-top: 2px;
+            }
+
+            input[type="text"]:focus {
+                outline: none;
+                background-color: honeydew;
+            }
+
+            #card {
+                width: 260px;
+                background: url("card.png") no-repeat left / contain;
+                background-size: 12%;
+                padding-left: 45px;
+            }
+
+            #card:focus {
+                outline: none;
+                background-color: honeydew;
+            }
+
+            #username {
+                width: 300px;
+            }
+
+            #mm, #yy {
+                width: 31%;
+                display: inline-block;
+            }
+
+            #cvc {
+                width: 31%;
+            }
+
+            #cvc_label {
+                margin-top: 0;
+            }
+
+            input[type="checkbox"], p {
+                display: inline;
+                color: gray;
+            }
+
+            input[type="checkbox"] {
+                vertical-align: baseline;
+                margin-right: 5px;
+            }
+
+            p {
+                margin-left: 0;
+            }
+
+            input[type="submit"] {
+                font-size: 14px;
+                color: white;
+                background-color: rgb(37, 226, 138);
+                border: none;
+                border-radius: 2px;
+                padding: 10px 25px;
+                box-shadow: 1px 2px 12px rgb(199, 199, 199);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form action="server.php" method="GET">
+            <label id="title">Your payment details</label>
+
+            <label for="username">NAME</label>
+            <input type="text" name="username" id="username" />
+            
+            <label for="card">CARD NUMBER</label>
+            <input type="text" name="card" id="card" maxlength="16" />
+
+            <label for="mm">EXPIRATION DATE</label>
+            <input type="text" name="mm" id="mm"
+            placeholder="MM" maxlength="2" />
+            <input type="text" name="yy" id="yy"
+            placeholder="YY" maxlength="2" />
+
+            <label for="cvc" id="cvc_label">CVC</label>
+            <input type="text" name="cvc" id="cvc" placeholder="123" maxlength="3" />
+
+            <input type="checkbox" name="check" checked /><p>Save my card for future purchases</p>
+
+            <input type="submit" value="PAY NOW">
+        </form>
+    </body>
+</html>

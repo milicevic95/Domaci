@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang="en"  style="scroll-behavior: smooth;">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Početna</title>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+            
+            body, body * {
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 0;
+                margin: 0;
+            }
+
+            body {
+                background-color: honeydew;
+            }
+
+            #div_za_meni {
+                background-color: rgb(202, 220, 243);
+                padding: 15px 0;
+                border-bottom: gray double 4px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+            }
+
+            ul {
+                list-style-type: none;
+                margin-left: 18px;
+            }
+
+            .meni_stavke {
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+                display: inline-block;
+                width: 24%;
+                border: 3px gray solid;
+                border-radius: 10px;
+                padding: 10px 0;
+                position: relative;
+            }
+            
+            .meni_stavke:hover {
+                background-color: honeydew;
+                cursor: pointer;
+            }
+
+            .podmeni {
+                font-size: 16px;
+                font-weight: 600;
+                text-align: left;
+                display: none;
+                border: 1px gray solid;
+                border-radius: 20%;
+                background-color: rgb(255, 253, 223);
+                padding: 20px 20px;
+                position: absolute;
+                top: 110%;
+                left: 25%;
+                cursor: default;
+            }
+
+            .podmeni li {
+                margin: 25px 10px;
+                cursor: pointer;
+            }
+
+            .meni_stavke:hover .podmeni {
+                display: block;
+            }
+
+            #div_za_meni a {
+                text-decoration: none;
+                color: black;
+            }
+
+            div.divs {
+                margin: 10%;
+                height: 450px;
+                box-shadow: 8px 10px gray;
+                position: relative;
+            }
+
+            #div_za_wel {
+                background: white url("slike/avatar.jpg") no-repeat left / contain
+            }
+
+            .naslov {
+                font-family: 'Courgette', cursive;
+                font-size: 24px;
+                line-height: 40px;
+            }
+
+            #div_za_wel p {
+                position: absolute;
+                top: 35%;
+                left: 50%;
+            }
+
+            #cv h4, #cv p {
+                position: absolute;
+                top: 5%;
+                left: 38%;
+            }
+
+            #cv p {
+                font-size: 18px;
+            }
+
+            #cv ul {
+                position: absolute;
+                top: 35%;
+                left: 40%;
+            }
+
+            #cv {
+                background: rgb(255, 253, 223) url("slike/cv.jpg") no-repeat left / contain;
+            }
+
+            #cv span {
+                display: inline-block;
+                font-weight: bold;
+                text-align: right;
+                width: 200px;
+                padding: 14px;
+                border-right: 6px double rgba(253, 207, 139, 0.589);
+            }
+
+            #zasto_it {
+                background-color: rgb(255, 253, 223);
+                height: 560px;
+                padding: 40px;
+            }
+
+            #zasto_it p:last-child, #itbtc p:last-child {
+                text-align: justify;
+                line-height: 30px;
+                padding: 60px;
+                position: absolute;
+                top: 5%;
+                left: 0%;
+            }
+
+            #itbtc p:last-child {
+                top: 7%;
+            }
+
+            #zasto_it p span, #itbtc p span {
+                font-weight: bold;
+            }
+
+            #itbtc {
+                height: 420px;
+                background-color: white;
+                padding: 40px;
+            }
+
+            #itbtc img {
+                position: absolute;
+                top: 8%;
+                left: 80%;
+            }
+
+            p.start_p {
+                margin: 0;
+                padding: 0;
+                background-color: honeydew;
+                height: 2px;
+            }
+
+            footer {
+                color: white;
+                background-color: rgb(34, 39, 43);
+                padding: 30px;
+                border-top: gray double 4px;
+                position: relative;
+            }
+
+            footer img {
+                position: absolute;
+                top: 20%;
+                right: 2%;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="div_za_meni">
+            <ul>
+                <li class="meni_stavke">
+                    <span><a href="pocetna.html">Početna strana</a></span>
+                    <ul class="podmeni">
+                        <li>
+                            <a href="pocetna.html#mark_1">Opšti podaci</a>
+                        </li>
+                        <li>
+                            <a href="pocetna.html#mark_2">Zašto IT?</a>
+                        </li>
+                        <li>
+                            <a href="pocetna.html#mark_3">IT Bootcamp i ja</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meni_stavke">
+                    <span><a href="o_autoru.html">O autoru</a></span>
+                    <ul class="podmeni">
+                        <li>
+                            <a href="o_autoru.html#mark_1">Obrazovanje</a>
+                        </li>
+                        <li>
+                            <a href="o_autoru.html#mark_2">Poslovi</a>
+                        </li>
+                        <li>
+                            <a href="o_autoru.html#mark_3">Kursevi</a>
+                        </li>
+                        <li>
+                            <a href="o_autoru.html#mark_4">Hobi</a>
+                        </li>
+                        <li>
+                            <a href="o_autoru.html#mark_5">Slobodno vreme</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meni_stavke">
+                    <span><a href="projekti.html">Projekti</a></span>
+                    <ul class="podmeni">
+                        <li>
+                            <a href="projekti.html#mark_1">PHP</a>
+                        </li>
+                        <li>
+                            <a href="projekti.html#mark_2">Python</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meni_stavke">
+                    <span><a href="kontakt.html">Kontakt</a></span>
+                    <ul class="podmeni">
+                        <li>
+                            <a href="kontakt.html#mark_1">Kontakt podaci</a>
+                        </li>
+                        <li>
+                            <a href="kontakt.html#mark_2">Kako do mene?</a>
+                        </li>
+                        <li>
+                            <a href="kontakt.html#mark_3">Kontakt forma</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div id="div_za_wel" class="divs">
+            <p class="naslov">
+                Pozdrav! Moje ime je Nemanja!<br>
+                Dobrodošli na sajt moje lične prezentacije!<br>
+                Dozvolite da sa vama podelim ponešto o sebi...
+            </p>
+        </div>
+
+        <p id="mark_1" class="start_p"></p>
+
+        <div id="cv" class="divs">
+            <h4 class="naslov">Nemanja Milićević</h4>
+            <p class="naslov">
+                <br>
+                Master fizikohemičar /<br>
+                In-training PHP programer<br>
+            </p>
+            <ul>
+                <li><span>Datum rođenja:</span> 4. jul 1995.</li>
+                <li><span>Mesto rođenja:</span> Velika Plana, Srbija</li>
+                <li><span>Formalno obrazovanje:</span> Univerzitet u Beogradu, Fakultet za fizičku hemiju</li>
+                <li><span>Radno mesto:</span> Istraživač-pripravnik, INN "Vinča"</li>
+                <li><span>Trenutno obrazovanje:</span> IT Bootcamp škola</li>
+                <li><span>Tehnologije:</span> PHP, HTML5, CSS, Python</li>
+            </ul>
+        </div>
+
+        <p id="mark_2" class="start_p"></p>
+
+        <div id="zasto_it" class="divs">
+            <p class="naslov">
+                Zašto IT?
+            </p>
+            <p>
+                &emsp;&emsp;&emsp;IT delatnost je sfera privrede koja se definitivno izdvaja u odnosu na ostale. Brojne prednosti koje je odlikuju čine skoro pa apsurdnim pitanje "Zašto bi se neko opredelio za IT?". Možda najveća prednost ove delatnosti je njena nagla ekspanzija koja se i dalje dešava. Potreba čovečanstva za olakšavanjem i automatizacijom raznih životnih procesa dovodi do sve veće potražnje za IT znanjima i veštinama. U svetu gde se radnik često ne bira na osnovu svojih veština i znanja, gde su stranačke i krvne veze glavni kriterijumi selekcije, i u doba kada su ostale sfere privrede ekonomski nestabilne, složićemo se da sigurnost koju pruža IT delatnost veoma znači.
+                <br>
+                <br>
+                &emsp;&emsp;&emsp;Pored svih prednosti koje nudi, glavni razlog zašto je mene privukla IT delatnost je sama priroda tog posla. Sticajem okolnosti sam upisao i uspešno završio Fakultet za fizičku hemiju i počeo da se bavim naukom. Međutim, već tokom studija, najverovatnije zbog same koncepcije edukacionog sistema na fakultetu, sticao sam utisak da to nije nešto čime bih se bavio do kraja života. Kada sam se zaposlio u struci, to sam sebi i potvrdio. Razmišljajući "Šta sada?", želeo sam da proverim da li bih ja mogao da programiram. Počeo sam da učim Python i tu stekao osnove OOP-a. Svidelo mi se što sam nalazio rešenja za konkretne probleme i što je to iziskivalo dosta logike, kao i sama činjenica da sam mogao stalno nešto novo da saznajem i da napredujem. Učenje programskog jezika mi je definitivno razbilo monotoniju koju sam imao baveći se fundamentalnom naukom. Mogao sam sate da provodim kucajući kod, a da to i ne primetim...
+                <br>
+                <br>
+                <span>I tada sam odlučio da je IT nešto čime želim da se bavim! :)</span>
+            </p>
+        </div>
+
+        <p id="mark_3" class="start_p"></p>
+
+        <div id="itbtc" class="divs">
+            <p class="naslov">IT Bootcamp i ja</p>
+            <img src="slike/itbcwhite.JPG" alt="IT Bootcamp" />
+            <p>
+                &emsp;&emsp;&emsp;Za IT Bootcamp školu prekvalifikacije čuo sam dok sam bio na studijama i volontirao u jednoj laboratoriji za kalibraciju uređaja. Bivša radnica te laboratorije je svoju prekvalifikaciju u QA testera upravo ostvarila pomoću IT Bootcamp-a. Novi posao je našla veoma brzo nakon završetka kursa. Kasnije, još jedan moj poznanik je završio IT Bootcamp školu i našao posao u IT sferi dok je još bio na svojim studijama. Čuvši priče o uspesima škole i onih koji su je završili, znao sam da ću sigurno konkurisati za program ove škole ukoliko jednog dana budem želeo da se prekvalifikujem.
+                <br>
+                <br>
+                &emsp;&emsp;&emsp;Zime 2021. godine, škola je objavila konkurs za kurs razvoja web stranica pomoću PHP jezika. Znao sam da je ovo idealna prilika za mene jer web dizajn bi omogućio da iskažem svoju kreativnost, dok bi PHP utemeljio i dodatno razvio moje osnove programiranja. Potrudio sam se da prođem selekciju i sada aktivno pohađam ovaj kurs.
+                <br>
+                <br>
+                &emsp;&emsp;&emsp;<span>Iskoristio bih ovu priliku da se zahvalim IT Bootcamp školi i Fondaciji "Ana i Vlade Divac" na pruženoj prilici da promenim svoju karijeru i život!</span>
+            </p>
+        </div>
+
+        <footer>
+            <p>
+                Ova web stranica je izrađena kao projekat u okviru kursa "Razvoj web stranica (PHP)" IT Bootcamp škole.
+            </p>
+            <img src="slike/itbcblack.JPG" alt="IT Bootcamp" />
+        </footer>
+    </body>
+</html>

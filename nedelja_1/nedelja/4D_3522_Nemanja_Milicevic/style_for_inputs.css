@@ -1,0 +1,21 @@
+input, select, textarea {
+    font-size: 16px;
+}
+
+p {
+    color: rgb(117, 175, 29);
+}
+
+.inputs {
+    background-color: rgba(182, 182, 233, 0.253);
+}
+
+textarea {
+    background-color: rgb(211, 245, 173);
+}
+
+#button {
+    border: solid 2px green;
+    background-color:rgb(167, 207, 167);
+    font-weight: bold;
+}

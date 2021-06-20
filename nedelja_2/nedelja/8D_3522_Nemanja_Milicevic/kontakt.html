@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="en" style="scroll-behavior: smooth;">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kontakt</title>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+            
+            body, body * {
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 0;
+                margin: 0;
+            }
+
+            body {
+                background-color: honeydew;
+            }
+
+            #div_za_meni {
+                background-color: rgb(202, 220, 243);
+                padding: 15px 0;
+                border-bottom: gray double 4px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+            }
+
+            ul {
+                list-style-type: none;
+                margin-left: 18px;
+            }
+
+            .meni_stavke {
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+                display: inline-block;
+                width: 24%;
+                border: 3px gray solid;
+                border-radius: 10px;
+                padding: 10px 0;
+                position: relative;
+            }
+            
+            .meni_stavke:hover {
+                background-color: honeydew;
+                cursor: pointer;
+            }
+
+            .podmeni {
+                font-size: 16px;
+                font-weight: 600;
+                text-align: left;
+                display: none;
+                border: 1px gray solid;
+                border-radius: 20%;
+                background-color: rgb(255, 253, 223);
+                padding: 20px 20px;
+                position: absolute;
+                top: 110%;
+                left: 25%;
+                cursor: default;
+            }
+
+            .podmeni li {
+                margin: 25px 10px;
+                cursor: pointer;
+            }
+
+            .meni_stavke:hover .podmeni {
+                display: block;
+            }
+
+            #div_za_meni a {
+                text-decoration: none;
+                color: black;
+            }
+
+            div.divs {
+                margin: 10%;
+                height: 450px;
+                box-shadow: 8px 10px gray;
+                position: relative;
+            }
+
+            #kontakt_podaci, #forma {
+                background-color: white;
+            }
+
+            #kontakt_podaci ul {
+                line-height: 50px;
+                border: 6px double gray;
+                padding: 35px;
+                position: absolute;
+                top: 25%;
+                left: 35%;
+                right: 35%;
+                bottom: 25%;
+            }
+
+            #kontakt_podaci img {
+                height: 2em;
+                vertical-align: middle;
+            }
+
+            .naslov {
+                font-family: 'Courgette', cursive;
+                font-size: 24px;
+                line-height: 40px;
+                position: absolute;
+                top: 5%;
+                left: 5%;
+            }
+
+            #mapa {
+                background-color: rgb(255, 253, 223);
+            }
+
+            #mapa iframe {
+                border: 6px double gray;
+                position: absolute;
+                top: 20%;
+                right: 20%;
+                bottom: 20%;
+                left: 20%;
+            }
+
+            fieldset {
+                border: 6px double gray;
+                position: absolute;
+                width: 700px;
+                top: 18%;
+                bottom: 18%;
+                left: 17%;
+            }
+
+            legend {
+                font-family: 'Courgette', cursive;
+                padding: 0 10px;
+            }
+
+            input[type="text"], textarea {
+                width: 300px;
+                font-size: 16px;
+                background-color: rgb(255, 253, 223);
+                padding: 10px;
+                margin: 10px;
+            }
+
+            input[type="text"] {
+                border: none;
+                border-bottom: 1px solid gray;
+            }
+
+            input[type="text"]:focus, textarea:focus {
+                outline: none;
+                background-color: honeydew;
+            }
+
+            textarea {
+                height: 78px;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            label {
+                font-weight: 600;
+            }
+
+            input[type="submit"] {
+                font-size: 16px;
+                font-weight: 600;
+                background-color: rgb(202, 220, 243);
+                border: 1px solid gray;
+                border-radius: 10px;
+                padding: 10px 30px;
+                margin: 10px;
+                box-shadow: 6px 6px gray;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+
+            input[type="submit"]:hover {
+                cursor: pointer;
+            }
+
+            #check_div, #div_za_fajl {
+                line-height: 22px;
+                margin: 10px;
+            }
+
+            #div_za_fajl {
+                position: absolute;
+                left: 360px;
+                top: 115px;
+            }
+
+            p.start_p {
+                margin: 0;
+                padding: 0;
+                background-color: honeydew;
+                height: 2px;
+            }
+
+            footer {
+                color: white;
+                background-color: rgb(34, 39, 43);
+                padding: 30px;
+                border-top: gray double 4px;
+                position: relative;
+            }
+
+            footer img {
+                position: absolute;
+                top: 20%;
+                right: 2%;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div id="div_za_meni">
+            <ul>
+                <li class="meni_stavke">
+                    <span><a href="pocetna.html">Početna strana</a></span>
+                    <ul class="podmeni">
+                        <li>
+                            <a href="pocetna.html#mark_1">Opšti podaci</a>
+                        </li>
+                        <li>
+                            <a href="pocetna.html#mark_2">Zašto IT?</a>
+                        </li>
+                        <li>
+                            <a href="pocetna.html#mark_3">IT Bootcamp i ja</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meni_stavke">
+                    <span><a href="o_autoru.html">O autoru</a></span>
+                    <ul class="podmeni">
+                        <li>
+                            <a href="o_autoru.html#mark_1">Obrazovanje</a>
+                        </li>
+                        <li>
+                            <a href="o_autoru.html#mark_2">Poslovi</a>
+                        </li>
+                        <li>
+                            <a href="o_autoru.html#mark_3">Kursevi</a>
+                        </li>
+                        <li>
+                            <a href="o_autoru.html#mark_4">Hobi</a>
+                        </li>
+                        <li>
+                            <a href="o_autoru.html#mark_5">Slobodno vreme</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meni_stavke">
+                    <span><a href="projekti.html">Projekti</a></span>
+                    <ul class="podmeni">
+                        <li>
+                            <a href="projekti.html#mark_1">PHP</a>
+                        </li>
+                        <li>
+                            <a href="projekti.html#mark_2">Python</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="meni_stavke">
+                    <span><a href="kontakt.html">Kontakt</a></span>
+                    <ul class="podmeni">
+                        <li>
+                            <a href="kontakt.html#mark_1">Kontakt podaci</a>
+                        </li>
+                        <li>
+                            <a href="kontakt.html#mark_2">Kako do mene?</a>
+                        </li>
+                        <li>
+                            <a href="kontakt.html#mark_3">Kontakt forma</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <p id="mark_1" class="start_p"></p>
+
+        <div id="kontakt_podaci" class="divs">
+            <p class="naslov">
+                Kontakt podaci
+            </p>
+
+            <ul>
+                <li>
+                    <img src="slike/phone.png" alt="Mobilni telefon: " /> +381 66 5471995
+                </li>
+                <li>
+                    <img src="slike/email.png" alt="E-mail: " /> n95milicevic@gmail.com
+                </li>
+                <li>
+                    <img src="slike/ig.png" alt="Instagram: " /> @_cone_cone_
+                </li>
+            </ul>
+        </div>
+
+        <p id="mark_2" class="start_p"></p>
+
+        <div id="mapa" class="divs">
+            <p class="naslov">
+                Kako do mene?
+            </p>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.5751102540416!2d20.521383715047918!3d44.80984708488719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a685fe92ce3%3A0x2d74564b1cc44fc5!2z0JzQuNGA0LjRmNC10LLRgdC60Lgg0LHRg9C70LXQstCw0YAgMjYsINCR0LXQvtCz0YDQsNC0!5e0!3m2!1ssr!2srs!4v1620145958541!5m2!1ssr!2srs" width="60%" height="60%" loading="lazy"></iframe>
+        </div>
+
+        <p id="mark_3" class="start_p"></p>
+
+        <div id="forma" class="divs">
+            <p class="naslov">
+                Ako želite da mi pošaljete poruku, možete to uraditi u nastavku...
+            </p>
+
+            <fieldset>
+                <legend>Kontakt forma</legend>
+
+                <form>
+
+                    <input type="text" name="ime" placeholder="Vaše ime i prezime" required /><br>
+
+                    <input type="text" name="polje_za_mejl" placeholder="Vaša e-mail adresa" required /><br>
+
+                    <div id="check_div">
+                        <label>Označite razlog(e) Vašeg pisanja:</label><br>
+                        <input type="checkbox" name="check_opcija" value="posao" checked /> Ponuda za posao<br>
+                        <input type="checkbox" name="check_opcija" value="saradnja" /> Ponuda za saradnju<br>
+                        <input type="checkbox" name="check_opcija" value="pohvala" /> Želite da pohvalite moj sajt<br>
+                        <input type="checkbox" name="check_opcija" value="lično" /> Lične prirode<br>
+                        <input type="checkbox" name="check_opcija" value="ostalo" /> Drugo<br>
+                    </div>
+
+                    <textarea name="poruka" placeholder="Vaša poruka" required></textarea>
+
+                    <div id="div_za_fajl">
+                        <label>Ako želite da prikačite fajl:</label><br>
+                        <input type="file" name="fajlovi[]" multiple>
+                    </div>
+
+                    <input type="submit" value="Pošalji">
+                </form>
+            </fieldset>
+        </div>
+
+        <footer>
+            <p>
+                Ova web stranica je izrađena kao projekat u okviru kursa "Razvoj web stranica (PHP)" IT Bootcamp škole.
+            </p>
+
+            <img src="slike/itbcblack.JPG" alt="IT Bootcamp" /
+        </footer>
+    </body>
+</html>
